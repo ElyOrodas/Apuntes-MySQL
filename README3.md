@@ -14,7 +14,7 @@
 - [ROUND y ejemplo](#ROUND-y-ejemplo)
 - [LENGTH y ejemplo](#LENGTH-y-ejemplo)
 - [(LEFT y RIGHT) y ejemplo](#(-LEFT-y-RIGHT-)-y-ejemplo)
-- [CONCAT y ejemplo](# CONCAT-y-ejemplo)
+- [CONCAT y ejemplo](#CONCAT-y-ejemplo)
 - [(SUM y COUNT) y ejemplos](#(-SUM-y-COUNT-)-y-ejemplos)
 - [(MAX Y MIN) y ejemplo](#(-MAX-y-MIN-)-y-ejemplo)
 - [AVG y ejemplo](#AVG-y-ejemplo)
@@ -153,7 +153,7 @@ Necesitamos el nombre de los países de África y que posean una población en m
       WHERE continent = 'Africa';
 ```      
 
-### LENGHT y ejemplo
+### LENGTH y ejemplo
 Se utiliza para devolver el número de letras que tiene la palabra del atributo "x"
 ***Ejemplo***
 Necesitamos seleccionar todos los países (countries) y que se reduzca los nombres a las tres primeras letras del nombre del país
