@@ -15,7 +15,7 @@
 - [LENGTH y ejemplo](#LENGTH-y-ejemplo)
 - [LEFT y RIGHT y ejemplo](#LEFT-y-RIGHT-y-ejemplo)
 - [CONCAT y ejemplo](#CONCAT-y-ejemplo)
-- [SUM y COUNT y ejemplos](#(-SUM-y-COUNT-)-y-ejemplos)
+- [SUM y COUNT y ejemplos](#SUM-y-COUNT-y-ejemplos)
 - [MAX Y MIN y ejemplo](#MAX-y-MIN-y-ejemplo)
 - [AVG y ejemplo](#AVG-y-ejemplo)
 - [GROUP BY y ejemplo](#GROUP BY-y-ejemplo)
