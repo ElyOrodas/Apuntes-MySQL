@@ -216,7 +216,7 @@ Necesitamos saber el promedio del salario de la tabla empleados
       FROM empleados;
 ```
 
-### GROUP BY Y HAVING y ejemplo
+### GROUP BY y HAVING y ejemplo
 - GROUP BY: Se encarga de agrupar tuplas para evitar errores que se pueden cometer con otras funciones como COUNT.
 - HAVING: devuelve filas donde los valores agregados cumplen las condiciones especificadas
 <br>***Ejemplo***<br>
