@@ -18,7 +18,7 @@
 - [SUM y COUNT y ejemplos](#SUM-y-COUNT-y-ejemplos)
 - [MAX Y MIN y ejemplo](#MAX-y-MIN-y-ejemplo)
 - [AVG y ejemplo](#AVG-y-ejemplo)
-- [GROUP BY y HAVING y ejemplo](#GROUP BY-y-HAVING-y-ejemplo)
+- [GROUP BY y HAVING y ejemplo](#GROUP-BY-y-HAVING-y-ejemplo)
 - [JOIN y ejemplo](#JOIN-y-ejemplo)
 - [INNER JOIN y ejemplo](#INNER-JOIN-y-ejemplo)
 - [LEFT JOIN y ejemplo](#LEFT-JOIN-y-ejemplo)
