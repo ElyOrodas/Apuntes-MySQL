@@ -18,12 +18,12 @@
 - [SUM y COUNT y ejemplos](#SUM-y-COUNT-y-ejemplos)
 - [MAX Y MIN y ejemplo](#MAX-y-MIN-y-ejemplo)
 - [AVG y ejemplo](#AVG-y-ejemplo)
-- [GROUP BY y ejemplo](#GROUP BY-y-ejemplo)
-- [HAVING y ejemplo](#HAVING-y-ejemplo)
+- [GROUP BY y HAVING y ejemplo](#GROUP BY-y-HAVING-y-ejemplo)
 - [JOIN y ejemplo](#JOIN-y-ejemplo)
 - [INNER JOIN y ejemplo](#INNER-JOIN-y-ejemplo)
 - [LEFT JOIN y ejemplo](#LEFT-JOIN-y-ejemplo)
 - [RIGHT JOIN y ejemplo](#RIGHT-JOIN-y-ejemplo)
+- [Sublenguajes SQL](#Sublenguajes-SQL)
 
 ## Reglas de sintaxis
 
@@ -75,7 +75,7 @@ Necesitamos encontrar todos los registros de la tabla "customers" cuya ciudad es
 
 ### IN y ejemplo
 Este operador es utilizado cuando se quiere comparar una columna con más de un valor 
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos seleccionar todos los registros de la tabla "customers" con "New York", "Los Angeles", "Chicago" de la columna "City"
 ```sql 
       SELECT *
@@ -135,12 +135,12 @@ Necesitamos seleccionar empleados de la tabla "employees" cuyos registros en la 
 ### REPLACE y ejemplo
 Sirve  para reemplaza caracteres determinados por un atributo
 <br>***Ejemplo***<br>
-Necesitamos seleccionar la capital que tiene de nombre de la capital (capital) "DF" de la tabla "countries", para sustituirlo por "Distrito Federal"
+Necesitamos seleccionar los apellidos que tienen la abreviación de "MO" de la tabla "empleados", para sustituirlo por "Montes de Oca"
 ```sql
-      SELECT capital
-        REPLACE (capital. 'DF','Distrito Federal')
-      FROM countries
-      WHERE name LIKE '%_DF';
+      SELECT apellidos
+      REPLACE (apellidos, 'MO','Montes de Oca')
+      FROM empleados
+      WHERE LIKE '%_MO';
 ```
 
 ### ROUND y ejemplo 
@@ -156,10 +156,10 @@ Necesitamos el nombre de los países de África y que posean una población en m
 ### LENGTH y ejemplo
 Se utiliza para devolver el número de letras que tiene la palabra del atributo "x"
 <br>***Ejemplo***<br>
-Necesitamos seleccionar todos los países (countries) y que se reduzca los nombres a las tres primeras letras del nombre del país
+Necesitamos seleccionar todos los nombres de los empleados para que sean apodos, que se reduzcan a las tres primeras letras
 ```sql 
-      SELECT countries, LENGHT(countries,3)
-      FROM world;
+      SELECT nombres, LENGHT(nombres,3)
+      FROM empleados;
 ``` 
 
 ### (LEFT y RIGHT) y ejemplo
@@ -172,6 +172,7 @@ Necesitamos todos los países con una población superior a 200000000 *(200 mill
       FROM world
       WHERE population >= 200000000;
 ```
+
 ### CONCAT y ejemplo
 Esta es una función que se utiliza para concatenar (unir) dos o más valores de texto y retorna la cadena de texto concatenada, puede tomar dos o más parámetros
 <br>***Ejemplo***<br>
@@ -187,16 +188,16 @@ Necesitamos concatenar la columna "name" y "City", separadas por coma de la tabl
 Necesitamos obtener la suma de los salarios de la tabla empleados
 ```sql 
        SELECT SUM(salario)
-       FROM empleados
+       FROM empleados;
 ```       
 - COUNT: es utilizada para contar el número de tuplas que existen
 <br>***Ejemplo***<br>
-Necesitamos contar todos los países (countries) de Europa de la tabla world 
+Necesitamos contar todos los empleados de la tabla empleados, contados por sus identificaciones (id) 
 ```sql 
-      SELECT COUNT(countries)
-      FROM world
-      WHERE continent = 'Europa';
+      SELECT COUNT(id)
+      FROM empleados;
 ```     
+
 ### (MAX y MIN) y ejemplo)   
 - MIN: es una función que se utiliza para retornar el valor mínimo de una expresión en una declaración SELECT
 - MAX: es una función que se utiliza para retornar el valor máximo de una expresión en una declaración SELECT
@@ -204,8 +205,79 @@ Necesitamos contar todos los países (countries) de Europa de la tabla world
 Necesitamos saber el salario mínimo entre empleados 
 ```sql
       SELECT MIN(salario)
-      FROM empleados
+      FROM empleados;
 ```      
+### AVG y ejemplo
+Esta función retorna el valor promedio de una columna numérica
+<br>***Ejemplo***<br>
+Necesitamos saber el promedio del salario de la tabla empleados 
+```sql
+      SELECT AVG(salario)
+      FROM empleados;
+```
+
+### GROUP BY Y HAVING y ejemplo
+- GROUP BY: Se encarga de agrupar tuplas para evitar errores que se pueden cometer con otras funciones como COUNT.
+- HAVING: devuelve filas donde los valores agregados cumplen las condiciones especificadas
+<br>***Ejemplo***<br>
+Necesitamos saber el salario de los empleados que sea superior a 900 euros 
+```sql
+      SELECT id, SUM(salario)
+      FROM empleados
+      GROUP BY id
+      HAVING SUM(salario) > 900;
+```      
+
+### JOIN y ejemplo
+Es una orden que permite combinar datos de dos o más tablas. Dicha combinación crea una tabla temporal que muestra la data especificada de las tablas combinadas. Siempre hay que fijarse en la condición ***ON*** para especificar la condición
+<br>***Ejemplo***<br>
+Necesitamos unir la tabla empleados con la tabla departamento, por los id de los empleados y su departamento correspondiente
+```sql
+      SELECT id.ndepartamento
+      FROM empleados JOIN departamento ON empleados.departamento;
+```
+
+### INNER JOIN y ejemplo
+Es equivalente a JOIN, retorna las filas cuando hay una coincidencia en las tablas
+<br>***Ejemplo***<br>
+Necesitamos seleccionar los nombres de los estudiantes y los nombres de las universidades donde esos estudiantes se encuentran
+```sql
+      SELECT students.name, universities.name
+      FROM studentes INNER JOIN univerisities ON (students.university_id = universities.id);
+```      
+
+### LEFT JOIN y ejemplo
+Esta combinación retorna todas las filas de la tabla izquierda, así no haya coincidencias en la tabla derecha. Esto significa que si no hay coincidencias para la cláusula ***ON*** en la tabla derecha, aún así la combinación retornará las filas de la primera tabla en el resultado. El conjunto resultante contiene todas las filas de la tabla izquierda y los datos que coincidan en la tabla derecha
+<br>***Ejemplo***<br>
+Necesitamos la combinación de la tabla "items" con "customers" 
+```sql 
+      SELECT customers.name, items.name 
+      FROM customers LEFT JOIN items ON customers.id = seller_id;
+```      
+
+### RIGHT JOIN y ejemplo
+Esta combinación retorna todas las filas de la tabla derecha, así no haya coincidencias en la tabla izquierda
+<br>***Ejemplo***<br>
+Necesitamos tener el código para seleccionar los nombres de los estudiantes y todos los nombres de las universidades 
+```sql
+      SELECT students.name, universities.name
+      FROM students RIGHT JOIN universities ON students.university_id = universities.id;
+```
+
+## Sublenguajes SQL
+Exisen seis sublenguajes que se utilizan para la realización de diferentes tareas, como son la creación de las bases de datos en diferentes formatos como son tablas, por consulta, sus modificaciones. 
+- ***DDL(DATA DEFINITION LANGUAGE)***: CREATE, ALTER, DROP
+- ***DML(DATA MANIPULATION LANGUAGE)***: INSERT, UPDATE, DELETE
+- ***DCL(DATA CONTROL LANGUAGE)***: GRANT, REVOKE(AUDIT, COMMENT)
+- ***TCL(TRANSACTION CONTROL LANGUAGE)***: COMMIT, ROLLBACK, (SAVEPOINT)
+- ***DQL(DATA QUERY LANGUAGE)***: SELECT
+- ***SCL(SESSION CONTROL LANGUAGE)***: ALTER SESSION
+
+
+
+
+
+
 
 
 
