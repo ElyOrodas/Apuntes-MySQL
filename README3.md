@@ -88,7 +88,7 @@ Necesitamos seleccionar todos los registros de la tabla "customers" con "New Yor
 
 ### AS y ejemplo
 Se utiliza para que la tabla resultado tenga un nombre determinado por el usuario
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos los nombres de los empleados (name) de la tabla "customers" que se demuestren en una tabla resultado llamada "NombreEmpleados"
 ```sql
       SELECT name AS NombreEmpleados
@@ -97,7 +97,7 @@ Necesitamos los nombres de los empleados (name) de la tabla "customers" que se d
 
 ### BETWEEN y ejemplo   
 Selecciona valores dentro de un rango. El primer valor debe ser el límite menos y el segundo valor es el límite superior
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos todos los registros con la identificación (ID) de la tabla "customers" que están entre 3 y 7:
 ```sql
       SELECT *
@@ -107,7 +107,7 @@ Necesitamos todos los registros con la identificación (ID) de la tabla "custome
 
 ### ORDER BY y ejemplo
 Es utilizado con SELECT para ordenar los datos recuperador, por defecto ordena los resultados en orden ascendente (ASC), si queremos descendente debemos poner DESC 
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos ordenar la tabla "customers" por la columna "name" en orden descendente
 ```sql
       SELECT * 
@@ -117,7 +117,7 @@ Necesitamos ordenar la tabla "customers" por la columna "name" en orden descende
 
 ### LIKE y ejemplos
 Es útil cuando especificas una condición de búsqueda dentro de WHERE. El emparejado de patrones SQL te permite utilizar "_" para coinicir con cualquier carácter único y "%" para coinicidir con un número arbitrario de caracteres.
-***Ejemplos***
+<br>***Ejemplo***<br>
 Necesitamos seleccionar empleados de la tabla "employees" cuyos registros en la columna "name", comience con la letra "A" 
 ```sql
       SELECT *
@@ -134,7 +134,7 @@ Necesitamos seleccionar empleados de la tabla "employees" cuyos registros en la 
 
 ### REPLACE y ejemplo
 Sirve  para reemplaza caracteres determinados por un atributo
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos seleccionar la capital que tiene de nombre de la capital (capital) "DF" de la tabla "countries", para sustituirlo por "Distrito Federal"
 ```sql
       SELECT capital
@@ -145,7 +145,7 @@ Necesitamos seleccionar la capital que tiene de nombre de la capital (capital) "
 
 ### ROUND y ejemplo 
 Se utiliza para seleccionar un atributo y redondearlo a cierto número con una cantidad "x" de decimales
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos el nombre de los países de África y que posean una población en millones con 6 decimales de redondeo 
 ```sql
       SELECT name, ROUND(population/1000000,3) 
@@ -155,7 +155,7 @@ Necesitamos el nombre de los países de África y que posean una población en m
 
 ### LENGTH y ejemplo
 Se utiliza para devolver el número de letras que tiene la palabra del atributo "x"
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos seleccionar todos los países (countries) y que se reduzca los nombres a las tres primeras letras del nombre del país
 ```sql 
       SELECT countries, LENGHT(countries,3)
@@ -165,7 +165,7 @@ Necesitamos seleccionar todos los países (countries) y que se reduzca los nombr
 ### (LEFT y RIGHT) y ejemplo
 - LEFT(x, n): Se usa para recoger los primeros "n" carácteres del atributo "x".  
 - RIGHT(x, n): Tiene la misma función que LEFT pero comenzando por la derecha.  
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos todos los países con una población superior a 200000000 *(200 millones)* y asígnarles una abreviatura que sean las tres primeras letras del nombre del país.  
 ```sql
       SELECT name, LEFT(name, 3)
@@ -174,7 +174,7 @@ Necesitamos todos los países con una población superior a 200000000 *(200 mill
 ```
 ### CONCAT y ejemplo
 Esta es una función que se utiliza para concatenar (unir) dos o más valores de texto y retorna la cadena de texto concatenada, puede tomar dos o más parámetros
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos concatenar la columna "name" y "City", separadas por coma de la tabla "customers"
 ```sql
       SELECT CONCAT(name,',',City)
@@ -183,14 +183,14 @@ Necesitamos concatenar la columna "name" y "City", separadas por coma de la tabl
 
 ### (SUM y COUNT) y ejemplos
 - SUM: es utilizada esta función para calcular la suma de los valores de una columna
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos obtener la suma de los salarios de la tabla empleados
 ```sql 
        SELECT SUM(salario)
        FROM empleados
 ```       
 - COUNT: es utilizada para contar el número de tuplas que existen
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos contar todos los países (countries) de Europa de la tabla world 
 ```sql 
       SELECT COUNT(countries)
@@ -200,7 +200,7 @@ Necesitamos contar todos los países (countries) de Europa de la tabla world
 ### (MAX y MIN) y ejemplo)   
 - MIN: es una función que se utiliza para retornar el valor mínimo de una expresión en una declaración SELECT
 - MAX: es una función que se utiliza para retornar el valor máximo de una expresión en una declaración SELECT
-***Ejemplo***
+<br>***Ejemplo***<br>
 Necesitamos saber el salario mínimo entre empleados 
 ```sql
       SELECT MIN(salario)
