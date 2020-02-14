@@ -38,7 +38,7 @@
 
 ### SELECT y ejemplo como estructura básica
 Es utilizada para seleccionar datos de una base de datos. El resultado es almacenado en una tabla resultante (también llamada: conjunto resultante)
-**Ejemplo**
+<br>**Ejemplo**<br>
 ```sql
       SELECT NombreObjeto
       FROM NombreTabla
