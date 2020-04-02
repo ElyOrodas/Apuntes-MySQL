@@ -4,7 +4,7 @@
 
 * [DDL (Definición y ejemplo)](#DDL)
    * [Sentecias DDL](#Sentencias-DDL) 
-* [DML (Definición y ejemplo)]
+* [DML (Definición y ejemplo)](#DML)
 * [Tabla definición de tipo de dato y CONSTRAINTS]
     * [Tipo de dato]
     * [CONSTRAINTS]
@@ -28,12 +28,40 @@
       - USER: creación de usuario para que realice consultas a la base de               datos
       - DOMAIN: creación de un dominio, que es un tipo de datos                           CONSTRAINST (con restricciones opcionales)
       
- * Ejemplo (crear una tabla):
+   * Ejemplo (crear una tabla):
       ```sql 
             CREATE DATABASE "Nombre_BD";
       ```      
       ```sql
-            CREATE TABLE "nombre_tabla" ("primera_columna" tipoDato Restricciones)
-                                        ("segundaa_columna" tipoDato Restricciones, 
-                                        etc)
+            CREATE TABLE "nombre_tabla" ("primera_columna" tipoDato Restricciones,
+                                         "segunda_columna" tipoDato Restricciones, 
+                                        etc);
       ```
+* **ALTER | MODIFICAR**
+  * Permite modificar la estructura de una tabla u objeto. Se pueden agregar/quitar campos a una tabla, modificar el tipo de campo, agregar/quitar índices a una tabla, modificar un trigger o disparador, etc.
+  * Ejemplo (agregar columna a una tabla)
+    ```sql
+          ALTER TABLE "nombre_tabla" ADD "nombre_columna";
+    ```
+    
+* **DROP | ELIMINAR**
+  * Permite eliminar un objeto de la base de datos. Puede ser una tabla, vista, índice, trigger, función, procedimiento o cualquier objeto que el motor de la base de datos soporte. Se puede commbinar con la sentencia ALTER.
+  * Ejemplo (eliminar columna)
+  ```sql
+        ALTER TABLE "nombre_tabla"
+        DROP COLUMN "nombre_columna";
+  ```
+  
+* **TRUNCATE | BORRAR TABLA**  
+    * Permite truncar todo el contenido de una tabla, borra la tabla y la vuelve a crear y no ejecuta ninguna transacción.
+    * La *ventaja* sobre el comando DROP, es que si se quiere borrar todo el contenido de la tabla, es mucho más rápido, especialmente si la tabla es muy grande.
+    * La *desventaja* es que TRUNCATE sólo sirve cuando se quiere eliminar absolutamente todos los registros, ya que no se permite la cláusula WHERE.  
+    * Ejemplo 
+      ```sql
+            DROP TABLE "nombre_tabla"
+      ```
+
+### DML
+
+*Definición*: sus siglas (Data Manipulation Language, DML) significa lenguaje de manipulación de datos, es un lenguaje proporcionado por el sistema de gestión de base de datos que permite a los usuarios llevar a cabo las tareas de consulta o manipulación de datos, organizados por el modelo de datos adecuado. Al conjunto de instrucciones DML que se ejecutan consecutivamente, se le llama *transacción*
+ 
