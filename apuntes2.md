@@ -24,8 +24,16 @@
   * Este comando admite por lo menos cinco predicados:
       - DATABASE: creación de una base de datos, sin ella no se podrán                     crear tablas, ni dominios, ni usuarios...
       - SCHEMA: creación de un esquema, se parece a una tabla pero más                    extenso, describendo su estructura y organización de                       datos.
+      - TABLE: creación de una entidad (una tabla con filas y columnas)
+      - USER: creación de usuario para que realice consultas a la base de               datos
+      - DOMAIN: creación de un dominio, que es un tipo de datos                           CONSTRAINST (con restricciones opcionales)
       
  * Ejemplo (crear una tabla):
       ```sql 
-            CREATE TABLE 'CUSTOMERS ';
+            CREATE DATABASE "Nombre_BD";
       ```      
+      ```sql
+            CREATE TABLE "nombre_tabla" ("primera_columna" tipoDato Restricciones)
+                                        ("segundaa_columna" tipoDato Restricciones, 
+                                        etc)
+      ```
