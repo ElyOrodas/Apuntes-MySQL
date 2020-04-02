@@ -20,12 +20,12 @@
 #### Sentencias DDL
 
 * **CREATE | CREAR**
-- Permite crear objetos de datos, como nuevas bases de datos, tablas, vistas y procedimientos almacenados.
-- Este comando admite por lo menos cinco predicados:
+  * Permite crear objetos de datos, como nuevas bases de datos, tablas, vistas y procedimientos almacenados.
+  * Este comando admite por lo menos cinco predicados:
       - DATABASE: creación de una base de datos, sin ella no se podrán                     crear tablas, ni dominios, ni usuarios...
       - SCHEMA: creación de un esquema, se parece a una tabla pero más                    extenso, describendo su estructura y organización de                       datos.
- 
-      * Ejemplo (crear una tabla):
+      
+ * Ejemplo (crear una tabla):
       ```sql 
             CREATE TABLE 'CUSTOMERS ';
       ```      
