@@ -6,9 +6,8 @@
    * [Sentecias DDL](#Sentencias-DDL) 
 * [DML (Definición y ejemplo)](#DML)
    * [Sentencias DML](#Sentencias-DML)
-* [Tabla definición de tipo de dato y CONSTRAINTS]
-    * [Tipo de dato]
-    * [CONSTRAINTS]
+* [Tipos de Datos](Tipos-de-Datos)
+* [CONSTRAINTS]
 * [DBMS]
 
 ### DDL
@@ -131,4 +130,8 @@
                 WHERE id_pedido=15;  
            ```
     
-    
+### Tipos de Datos
+`**RDBMS**: significa sistema de gestión de bases de datos relacionales`
+  * **Numéricos**
+        * Exactos:
+            * Enteros, según
