@@ -224,3 +224,29 @@
 Descargamos desde su web a una máquina virtual y seguimos los pasos como se demuestran a continuación. Mayormente en todas las ventanas se clica en ejecutar o finalizar.
 
 ![1](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/1.PNG)
+
+![2](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/2.PNG)
+
+![3](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/3.PNG)
+
+![4](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/4.PNG)
+
+![5](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/5.PNG)
+
+![6](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/6.PNG)
+
+![7](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/7.PNG)
+
+![8](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/8.PNG)
+
+![9](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/9.PNG)
+
+![10](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/10.PNG)
+
+![11](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/11.PNG)
+
+![12](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/12.PNG)
+
+![13](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/13.PNG)
+
+![14](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/14.PNG)
