@@ -185,5 +185,28 @@
     ```
     
 * **Unicidad (Unique)**    
-    * Cuando estamos creando o añadiendo 
+    * Se definen de la misma forma que una Primary Key, simplemente cambiando PRIMARY KEY por UNIQUE
+
+    * Cuando estamos creando o añadiendo una columna:`columna tipo ... [CONSTRAINT nombre] UNIQUE`
+    * Al final de la lista de columnas [CONSTRAINT nombre] UNIQUE(listaColumnas)
+
+* **Clave Fornánea (Foreign Key )**
+    * Se definen de forma parecida a una PK o UK mediante ALTER TABLE
+      `CREATE TABLE tabla1 (columna_1 tipo_dato_1 [NOT NULL],columna_2 tipo_dato_2 [NOT NULL],... columna_n tipo_dato_n [NOT NULL] );`
       
+      ```sql 
+            ALTER TABLE tabla1
+            ADD CONSTRAINT FK_tabla1_tabla2
+            FOREIGN KEY (columna_1) references tabla2(columna_1);
+      ```
+
+* **Obligatoriedad**
+    * Solo cuando estamos creando tablas o añadiendo una columa: `columna tipo ... [CONSTRAINT nombre] NOT NULL`
+
+* **Integridad referencial**
+    * Cuando estamos creando tablas o añadiendo una columna:` columna tipo … [CONSTRAINT nombre] REFERENCES tablaPrincipal[(columnas)] [ON DELETE CASCADE|SET NULL]`
+  * Al final de la lista de columnas `[CONSTRAINT nombre] FOREIGN KEY(columnas) REFERENCES tablaPrincipal(columnas) [ON DELETE CASCADE|SET NULL]`
+  
+* **Validación(CHECK)**
+* Cuando estamos creando o añadiendo una columna: `columna tipo … [CONSTRAINT nombre] CHECK(condición)`
+* Al final de la lista de columnas `[CONSTRAINT nombre] CHECK(condición)`
