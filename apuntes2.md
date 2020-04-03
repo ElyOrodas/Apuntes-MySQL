@@ -134,9 +134,9 @@
 
 **Nota**: RDBMS, significa sistema de gestión de bases de datos relacionales 
 
-  * **Numéricos**
-        * Exactos:
-            - Enteros, según el RDBMS: SMALLINT, INTEGER.
-            - Con precisión y escala, según el RDBMS: NUMERIC(X,Y) O NUMBER(X,Y).
-         * Aproximados
-            - De punto flotante, según el RDBMS: REAL/DOUBLE.
+* **Numéricos**
+      * Exactos:
+         * Enteros, según el RDBMS: SMALLINT, INTEGER.
+         * Con precisión y escala, según el RDBMS: NUMERIC(X,Y) O NUMBER(X,Y).
+      * Aproximados
+         * De punto flotante, según el RDBMS: REAL/DOUBLE.
