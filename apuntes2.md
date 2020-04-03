@@ -6,8 +6,8 @@
    * [Sentecias DDL](#Sentencias-DDL) 
 * [DML (Definición y ejemplo)](#DML)
    * [Sentencias DML](#Sentencias-DML)
-* [Tipos de Datos](Tipos-de-Datos)
-* [CONSTRAINTS]
+* [Tipos de Datos](#Tipos-de-Datos)
+* [Constraints](#Constraints)
 * [DBMS]
 
 ### DDL
@@ -140,3 +140,50 @@
          * Con precisión y escala, según el RDBMS: NUMERIC(X,Y) O NUMBER(X,Y).
     * Aproximados
       * De punto flotante, según el RDBMS: REAL/DOUBLE.
+      
+* **Texto**
+    * De largo fijo
+      * CHAR(N), los caracteres no usados a la derecha se rellenan con espacios en blanco
+    * De largo variable
+      * VARCHAR(N), se mantienen el largo en un entero
+    * Los caracteres deben ser parte del juego de caracteres de la base (UNICODE es un juego de caracteres que sopota internacionalización)
+
+* **Booleanos**
+    * No todos los RDBMS lo soportan 
+    
+* **Fecha y hora**
+    * DATE: año, mes y día
+    * TIME: hora, minuto y segundo
+    * TIMESTAMP: DATE + TIME
+    
+    * El formato dependerá de la configuración del "National Language"
+    
+* **Objetos grandes**
+    * CLOB: Character Long Object
+      * Permite almacenar textos muy grandes, que superen los límites de VARCHAR
+      * Los caracteres deben ser parte del juego de caracteres de la base
+    
+    * BLOP: Binary Long Object
+      * Permite almacenar archivos binarios, como imágenes o documentos 
+
+* Todos los tipos de datos aceptan el valor NULL
+* Los límites dependen de la implementación, por lo que varían de un RDBMS a otro
+* El tipo de datos de una columna debe permitir almacenar todos los valores previstos, pero usar un tipo demasiado grande puede desperdiciar espacio y limitar el desempeño (no usar TIMESTAMP si alcanza con DATE, no usar CLOB si alcanza con VARCHAR, etc)
+
+### Constraints (restricciones)
+
+* **Clave Primaria (Primary Key, PK)**
+    * • Sólo una de las columnas puede ser definida como PK de esta forma (sólo sirve para claves por una única columna)
+    * Cuando estamos creando o añadiendo una columa: `columna tipo ... [CONSTRAINT nombre] PRIMARY KEY`
+    * Al final de la lista de columnas `[CONSTRAINT nombre] PRIMARY KEY (listaColumnas)`
+    * Ejemplo
+    ```sql
+          CREATE TABLE movimientos( cod_persona NUMBER(10),
+                                    fecha TIMESTAMP,
+                                    importe NUMBER(11,4),
+          CONSTRAINT movimientos_pk PRIMARY KEY(cod_persona,fecha));
+    ```
+    
+* **Unicidad (Unique)**    
+    * Cuando estamos creando o añadiendo 
+      
