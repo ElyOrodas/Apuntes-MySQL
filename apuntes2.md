@@ -208,5 +208,17 @@
   * Al final de la lista de columnas `[CONSTRAINT nombre] FOREIGN KEY(columnas) REFERENCES tablaPrincipal(columnas) [ON DELETE CASCADE|SET NULL]`
   
 * **Validación(CHECK)**
-* Cuando estamos creando o añadiendo una columna: `columna tipo … [CONSTRAINT nombre] CHECK(condición)`
-* Al final de la lista de columnas `[CONSTRAINT nombre] CHECK(condición)`
+    * Cuando estamos creando o añadiendo una columna: `columna tipo … [CONSTRAINT nombre] CHECK(condición)`
+    * Al final de la lista de columnas `[CONSTRAINT nombre] CHECK(condición)`
+    * Se pueden definir inline o a través de ALTER TABLE
+        ```CREATE TABLE tabla1 (
+                              columna_1 tipo_dato_1 [NOT NULL],
+                              columna_2 tipo_dato_2 [NOT NULL],
+                              ...
+                              columna_n tipo_dato_n [NOT NULL]
+                                );```
+         ```sql 
+            ALTER TABLE tabla1
+            ADD CONSTRAINT check_columna_1_tabla1
+            CHECK (columna_1 in ('V1', 'V2', ..., 'Vn'));
+         ```
