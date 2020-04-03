@@ -222,4 +222,5 @@
 ### MySQL
 
 Descargamos desde su web a una máquina virtual y seguimos los pasos como se demuestran a continuación. Mayormente en todas las ventanas se clica en ejecutar o finalizar.
-![1]https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/1.PNG?raw=true
+
+![1](https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/1.PNG)
