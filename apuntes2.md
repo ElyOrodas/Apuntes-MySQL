@@ -8,7 +8,7 @@
    * [Sentencias DML](#Sentencias-DML)
 * [Tipos de Datos](#Tipos-de-Datos)
 * [Constraints](#Constraints)
-* [DBMS]
+* [MySQL](#MySQL)
 
 ### DDL
 
@@ -218,3 +218,8 @@
             ADD CONSTRAINT check_columna_1_tabla1
             CHECK (columna_1 in ('V1', 'V2', ..., 'Vn'));
          ```
+
+### MySQL
+
+Descargamos desde su web a una máquina virtual y seguimos los pasos como se demuestran a continuación. Mayormente en todas las ventanas se clica en ejecutar o finalizar.
+![1]https://github.com/ElyOrodas/Apuntes-MySQL/blob/master/1.PNG?raw=true
